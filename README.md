@@ -107,4 +107,4 @@ pred_label = le.inverse_transform(encoded_pred)
 # High: > 3.89%, Medium-High: 0.29 - 3.89%, Medium-Low: 0.0088 - 0.29%, and Low: < 0.0088%; unit: % N2O-N/N removal
 print("Predicted EF Level:", pred_label[0])
 ```
-**If you use this model for publication, please cite xxx**
+**If you use this model for publication, please cite**

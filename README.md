@@ -49,6 +49,7 @@ cd BNR-N2O-Tier-Predictor
 Prepare a single observation with the same categorical and numeric features, i.e. your inquiry facility information, used during training.
 
 3. Run the prediction code
+   
 Below is an example inference script:
 ```python
 import joblib

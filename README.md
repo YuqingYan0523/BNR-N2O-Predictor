@@ -2,11 +2,13 @@
 Authors: [Yuqing Yan](https://github.com/YuqingYan0523) and [Junjie Zhu](https://github.com/starfriend10) @Princeton University WET Lab led by Z. Jason Ren
 
 ## Project Overview
-This project predicts nitrous oxide (N₂O) emission factor (EF) levels from full-scale biological nitrogen removal (BNR) systems using machine learning. The model is trained on literature-derived metadata, which includes both numeric features (e.g., dissolved oxygen) and categorical features (e.g., process configuration). Emission factor levels were grouped into four tiers: *High*, *Medium-High*, *Medium-Low*, and *Low* using Gaussian Mixture Model clustering of reported EF values.
+This project aimed to predict nitrous oxide (N₂O) emission factor (EF) levels from full-scale biological nitrogen removal (BNR) systems using machine learning. The model was trained based on literature-derived metadata, which included both numeric features (e.g., dissolved oxygen) and categorical features (e.g., process configuration). Emission factor levels were grouped into four tiers: *High*, *Medium-High*, *Medium-Low*, and *Low* using Gaussian Mixture Model clustering of reported EF values.
 
 To ensure robust and unbiased model training, data were split by study (not individual observation) to avoid leakage, and stratified to preserve the distribution of both inputs and emission tiers. Given the limited and imbalanced dataset, 2000 random seeds were tested, yielding 30 valid splits that met these criteria. These were used for model selection and evaluation.
 
-Multiple classification models (e.g., Gradient Boosting, Random Forest, CatBoost, MLP) and regression models were tested, incorporating class weights to address label imbalance. Final model selection was based on performance consistency across splits. Feature selection was performed using permutation importance and SHAP values, followed by hyperparameter tuning via grid search with cross-validation. Eventually, an optimal Gradient Boosting model with an overall accuracy of 0.52 was developed with 0.6-0.7 AUCs across the four tiers was develped.
+Multiple classification models (e.g., Gradient Boosting, Random Forest, CatBoost, MLP) and regression models were developed and tested, incorporating class weights to address the data imbalance issue. Final model selection was based on performance consistency across splits. Feature selection was performed using permutation importance and SHAP values, followed by hyperparameter optimization via grid search with cross-validation. Eventually, an optimal Gradient Boosting model with an overall accuracy of 0.52 was developed with 0.6-0.7 AUCs across the four tiers was develped.
+
+The model can readily be applied to estimate emission levels at other plants and we encourage and invite you to test and use. The modeling output can also be converted to a binary classifcation result by combining *High* with *Medium-High* and *Medium-Low* with *Low*, respectively (binary accuracy is about xxx).
 
 ## Environment
 Please make sure you have the following packages installed:

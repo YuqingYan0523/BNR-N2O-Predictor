@@ -4,9 +4,9 @@ import pandas as pd
 # ========================================= #
 # 1 Load model, label encoder and scaler    #
 # ========================================= #
-model = joblib.load("n2o_model.pkl")
-le = joblib.load("label_encoder.pkl")
-scaler = joblib.load("minmax_scaler.pkl")
+model = joblib.load("src/n2o_model.pkl")
+le = joblib.load("src/label_encoder.pkl")
+scaler = joblib.load("src/minmax_scaler.pkl")
 
 # ========================================= #
 # 2 Create input sample                     #

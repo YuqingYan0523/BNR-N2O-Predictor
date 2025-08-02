@@ -4,7 +4,7 @@ import pandas as pd
 # ========================================= #
 # 1 Load model, label encoder and scaler    #
 # ========================================= #
-model = joblib.load("src/n2o_model.pkl")
+model = joblib.load("src/n2o_model.pkl") # change path if necessary!
 le = joblib.load("src/label_encoder.pkl")
 scaler = joblib.load("src/minmax_scaler.pkl")
 

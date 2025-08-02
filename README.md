@@ -8,7 +8,12 @@ To ensure robust and unbiased model training, data were split by study (not indi
 
 Multiple classification models (e.g., Gradient Boosting, Random Forest, CatBoost, MLP) and regression models were developed and tested, incorporating class weights to address the data imbalance issue. Final model selection was based on performance consistency across splits. Feature selection was performed using permutation importance and SHAP values, followed by hyperparameter optimization via grid search with cross-validation. Eventually, an optimal Gradient Boosting model with an overall accuracy of 0.52 was developed with 0.6-0.7 AUCs across the four tiers was develped.
 
-The model can readily be applied to estimate emission levels at other plants and we encourage and invite you to test and use. The modeling output can also be converted to a binary classifcation result by combining *High* with *Medium-High* and *Medium-Low* with *Low*, respectively (binary accuracy is about xxx).
+The model can readily be applied to estimate emission levels at other plants and we encourage and invite you to test and use. The modeling output can also be converted to a binary classifcation result by combining *High* with *Medium-High* and *Medium-Low* with *Low*, respectively (binary accuracy is about 0.77).
+
+## Work Origin and Citation
+You can find and cite the original study here:
+
+*<ins>Publication DOI reserved</ins>*
 
 ## Environment
 Please make sure you have the following packages installed:
@@ -110,4 +115,3 @@ pred_label = le.inverse_transform(encoded_pred)
 # High: > 3.89%, Medium-High: 0.29 - 3.89%, Medium-Low: 0.0088 - 0.29%, and Low: < 0.0088%; unit: % N2O-N/N removal
 print("Predicted EF Level:", pred_label[0])
 ```
-**If you use this model for publication, please cite**
